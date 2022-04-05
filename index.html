@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<button class="btn1">рандом до <span class="text1">10</span></button>
+<button class="btn2">кнопка до <span class="text2">100</span></button>
+<button class="btn3">кнопка до <span class="text3">1000</span></button>
+
+<script type="text/javascript">
+	 let b1 = document.querySelector(".btn1");
+	 let t1 = document.querySelector(".text1");
+	 	 let b3 = document.querySelector(".btn3");
+	 let t3 = document.querySelector(".text3");
+	  let b2 = document.querySelector(".btn2");
+	 let t2 = document.querySelector(".text2");
+
+	 b1.onclick = function(){
+	 	let rand = getRandom(10);
+	 	t1.innerHTML = rand
+	 }
+	
+
+	 b2.onclick = function(){
+	 	let rand = getRandom(100);
+ 		t2.innerHTML = rand
+	 }
+
+
+	 b3.onclick = function(){
+	 	let rand = getRandom(1000);
+ 		t3.innerHTML = rand
+	 }
+	 function getRandom(number){
+	 	let n = Math.random(); //1. От 0 до 1 нецелое число
+        let big = n * number; //2. увеличивали число
+        let index = Math.round(big); //3. округляем числ
+        return index
+	 }
+
+    
+    
+
+</script>
+</body>
+</html>
